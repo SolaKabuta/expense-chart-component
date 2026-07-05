@@ -30,16 +30,16 @@
                 </p>
             </section>
             <!--SPENDING-->
-            <section class=" bg-white text-[#3A2315] w-full h-80 p-5 rounded-xl">
+            <section class=" bg-white text-[#3A2315] w-full h-max p-5 rounded-xl">
                 <h1 class="font-semibold text-2xl mb-5">
                     Spending - Last 7 days
                 </h1>
                 <!--CHARTS-->
                 <div class="grid place-items-center">
                     <ul class="flex gap-5">
-                        <li>
-                            <div id="hidden bg-[#3A2315]">
-                                
+                        <li id="monday">
+                            <div id="mon-amount" class="invisible bg-[#3A2315] h-10 w-10 p-5  text-white text-center">
+                               <p>$52.36</p> 
                             </div>
                             <div class="bg-[#EC755D] w-10 h-20 rounded-md relative">
                                 <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-sm opacity-0">
@@ -50,7 +50,7 @@
                             mon
                         </li>
                         <li>
-                            <div class="bg-[#EC755D] w-10 h-20 rounded-md relative">
+                            <div id="tuesday" class="bg-[#EC755D] w-10 h-20 rounded-md relative">
                                 <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-sm opacity-0">
                                     $17.45
                                 </span>
@@ -105,7 +105,6 @@
                         </li>
                     </ul>
                 </div>
-                <!--mon tue wed thu fri sat-->
                 <!--DIVIDER-->
                 <div class="bg-slate-500/50 w-full h-[0.5px] my-6"></div>
                 <div class="flex justify-between items-center">
@@ -119,12 +118,11 @@
                         </p>
                     </div>
                     <!--POURCENTAGE-->
-                    <div>
-                        <p>
+                    <div class="text-right">
+                        <p id="pourcentage" class="font-bold text-xs">
                             +2.4% 
                         </p>
-                        <p>
-                            from last month
+                        <p class="text-slate-500/50 text-sm">           from last month
                         </p>
                     </div>
                 </div>              
@@ -136,6 +134,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="https://solakabuta.com">Sola Kabuta</a>.
         </footer>
-        <script src="main.js"></script>
+        <script src="main.js" type="module"></script>
     </body>
 </html>
