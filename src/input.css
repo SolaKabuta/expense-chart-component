@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+main {
+    background: #f7e9dc;
+}
+
+
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    padding: 20px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
