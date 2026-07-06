@@ -13,9 +13,10 @@
         <title>Frontend Mentor | Expenses chart component</title>
     </head>
     <body>
-        <main class="min-h-screen w-[70%] md:w-screen px-10 grid place-content-center gap-5">
+        <main class="min-h-screen flex  items-center justify-center px-4">
+            <div class="flex flex-col gap-6 max-w-md w-full">
             <!--BALANCE-->
-            <section class="flex justify-between items-center bg-[#EC755D] text-white rounded-lg md:w-full px-8 py-6 ">
+            <section class="flex justify-between items-center bg-[#EC755D] text-white rounded-lg w-full px-6 py-6 ">
               <div>
                   <p class="opacity-80 text-sm">
                       My balance
@@ -29,18 +30,18 @@
               </div>
             </section>
             <!--SPENDING-->
-            <section class=" bg-white text-[#3A2315] h-max p-8 rounded-xl">
+            <section class=" bg-white text-[#3A2315] w-full p-6 rounded-2xl">
                 <h1 class="font-semibold text-2xl mb-5">
                     Spending - Last 7 days
                 </h1>
                 <!--CHARTS-->
-                <div class="grid place-items-center">
+                <div class="w-full">
                     <ul id="charts" class="flex gap-0 [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:justify-end [&>li]:gap-2 [&_p]:text-sm ">
                     </ul>
                 </div>
                 <!--DIVIDER-->
                 <div class="bg-[#F7E9DC] w-full h-px my-6"></div>
-                <div class="flex justify-between items-end">
+                <div class="flex justify-between items-end gap-4">
                     <!--TOTAL-->
                     <div>
                         <p class="text-slate-500/50 text-sm pb-1">
@@ -61,6 +62,7 @@
                     </div>
                 </div>              
             </section>
+            </div>
         </main>
         <footer class="attribution">
             Challenge by
