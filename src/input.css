@@ -6,6 +6,10 @@ main {
     font-family: "DM Sans", sans-serif;
 }
 
+.hoverColor {
+    background: #FF9B87;
+}
+
 
 
 .attribution {

@@ -1,17 +1,10 @@
 let charts = document.getElementById("charts"); 
 let pourcentage = document.getElementById("pourcentage");
 
-// DAYS
-// let monday = document.getElementById("monday")
-
-// // DAY AMOUNT
-// let mondayAmount = document.getElementById("mon-amount")
-
 // DISPLAY HOVER AMOUNT
 // charts.addEventListener("mouseenter", function() {
 //     chart.classList.toggle("invisible");
 // })
-
 
 fetch("/data.json")
   .then(response => response.json())
@@ -37,27 +30,24 @@ fetch("/data.json")
 
     // DISPLAY DAILY CHART
     function displayDay(item) {
-      charts.innerHTML += `<li id=${item.day}>
-          <div id=${item.amount} class="invisible bg-[#3A2315] p-2  text-white text-center rounded-lg">
-             <p>${item.amount}</p> 
+      charts.innerHTML +=
+        `<li id=${item.day} class="group flex justify-end ">
+          <div id=${item.amount} class="opacity-0 bg-[#3A2315] p-2  text-white text-center rounded-md transition duration-150 ease-in-out group-hover:opacity-100">
+             <p class="font-semibold text-xl"><span>$</span>${item.amount}</p> 
           </div>
-          <div class="bg-[#EC755D] w-10 h-20 rounded-md relative">
-              <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-sm opacity-0">
-                  $17.45
-              </span>
+          <div style="height:${item.amount}px" class="bg-[#EC755D] transition duration-300 hover:bg-[#FF9B87] w-10 rounded-md">
           </div>
-          <p class="opacity-60">${item.day}</p>
+          <p class="text-[#B1ACA7] text-md font-semibold">${item.day}</p>
       </li>`
-
-      let mon = document.getElementById('mon');
 
       
 
     }
 
-    
+    // WHAT DAY R WE 
+    let today = new Date().getDay(); 
+    console.log(today)
 });
 
-// WHAT DAY R WE 
-let today = new Date().getDay();
+
 
