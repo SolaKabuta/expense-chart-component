@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/expenses-chart-component-solution-IriRh_6r_-)
 - Live Site URL: [Live Site](https://expenses-chart-component-alpha-dusky.vercel.app/)
 
 ## My process
