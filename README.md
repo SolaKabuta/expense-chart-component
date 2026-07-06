@@ -15,8 +15,6 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,7 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/desktop.png)
+![desktop](./screenshots/desktop.png)
+![mobile](./screenshots/mobile.png)
 
 
 ### Links
@@ -44,7 +43,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- [Tailwindcss](https://tailwindcss.com/)Tailwindcss CLI and CSS custom properties
+- [Tailwindcss](https://tailwindcss.com/) Tailwindcss CLI and CSS custom properties
 - Mobile-first workflow
 
 ### What I learned
