@@ -31,13 +31,13 @@ fetch("/data.json")
     // DISPLAY DAILY CHART
     function displayDay(item) {
       charts.innerHTML +=
-        `<li id=${item.day} class="group flex justify-end ">
+        `<li id=${item.day} class="group">
           <div id=${item.amount} class="opacity-0 bg-[#3A2315] p-2  text-white text-center rounded-md transition duration-150 ease-in-out group-hover:opacity-100">
              <p class="font-semibold text-xl"><span>$</span>${item.amount}</p> 
           </div>
-          <div style="height:${item.amount}px" class="bg-[#EC755D] transition duration-300 hover:bg-[#FF9B87] w-10 rounded-md">
+          <div style="height:${item.amount*2.5}px" class="bg-[#EC755D] transition duration-300 hover:bg-[#FF9B87] w-10 rounded-md">
           </div>
-          <p class="text-[#B1ACA7] text-md font-semibold">${item.day}</p>
+          <p class="text-[#B1ACA7] font-semibold text-xs py-2">${item.day}</p>
       </li>`
 
       

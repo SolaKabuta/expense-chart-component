@@ -304,8 +304,14 @@
   .gap-0 {
     gap: 0;
   }
+  .gap-1 {
+    gap: var(--spacing);
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -346,6 +352,9 @@
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
@@ -473,6 +482,12 @@
       width: 100%;
     }
   }
+  .\[\&_p\]\:text-sm {
+    & p {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
   .\[\&_p\]\:text-xs {
     & p {
       font-size: var(--text-xs);
@@ -492,6 +507,11 @@
   .\[\&\>li\]\:items-center {
     &>li {
       align-items: center;
+    }
+  }
+  .\[\&\>li\]\:justify-end {
+    &>li {
+      justify-content: flex-end;
     }
   }
   .\[\&\>li\]\:gap-2 {
