@@ -1,7 +1,4 @@
-
-let balance = document.getElementById("balance").innerHTML = 921.48; 
 let charts = document.getElementById("charts"); 
-let monthTotal = document.getElementById("total");
 let pourcentage = document.getElementById("pourcentage");
 
 // DAYS
@@ -19,6 +16,8 @@ let pourcentage = document.getElementById("pourcentage");
 fetch("/data.json")
   .then(response => response.json())
   .then(data => {
+    
+    let balance = document.getElementById("balance").innerHTML = 921.48; 
 
     // CALCULATE EXPENSES SUM
     let expensesSum = data.reduce((sum, item) => sum + item.amount, 0)
