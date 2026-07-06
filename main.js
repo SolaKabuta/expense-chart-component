@@ -30,23 +30,30 @@ fetch("/data.json")
 
     // DISPLAY DAILY CHART
     function displayDay(item) {
+
+      let today = new Date().getDay(); 
+      console.log(today)
+  
+      const weekDays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  
+      let currentDayName = weekDays[today];
+
+      let currentDayColor = (item.day === currentDayName) ? 'bg-[#76B5BC]' : 'bg-[#EC755D]';
+
+      
       charts.innerHTML +=
         `<li id=${item.day} class="group">
           <div id=${item.amount} class="opacity-0 bg-[#3A2315] p-2  text-white text-center rounded-md transition duration-150 ease-in-out group-hover:opacity-100">
              <p class="font-semibold text-xl"><span>$</span>${item.amount}</p> 
           </div>
-          <div style="height:${item.amount*2.5}px" class="bg-[#EC755D] transition duration-300 hover:bg-[#FF9B87] w-10 rounded-md">
+          <div style='height:${item.amount*2.5}px;' class="${currentDayColor} transition duration-300 hover:bg-[#FF9B87] hover:cursor-pointer w-10 rounded-md">
           </div>
           <p class="text-[#B1ACA7] font-semibold text-xs py-2">${item.day}</p>
       </li>`
-
-      
-
     }
 
     // WHAT DAY R WE 
-    let today = new Date().getDay(); 
-    console.log(today)
+    
 });
 
 

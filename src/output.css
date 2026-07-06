@@ -329,6 +329,9 @@
   .bg-\[\#3A2315\] {
     background-color: #3A2315;
   }
+  .bg-\[\#76B5BC\] {
+    background-color: #76B5BC;
+  }
   .bg-\[\#EC755D\] {
     background-color: #EC755D;
   }
@@ -460,6 +463,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         opacity: 100%;
+      }
+    }
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
       }
     }
   }
