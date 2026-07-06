@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
 
-main {
+body {
     background: #f7e9dc;
+}
+
+main {
     font-family: "DM Sans", sans-serif;
 }
 
 .hoverColor {
     background: #FF9B87;
 }
-
 
 
 .attribution {

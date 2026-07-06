@@ -18,7 +18,6 @@ fetch("/data.json")
     // DISPLAY TOTAL AFTER EXPENSES 
     total.innerHTML = result
 
-    
     // MAP THROUGH DATA.JSON 
     data.map(displayDay)
 

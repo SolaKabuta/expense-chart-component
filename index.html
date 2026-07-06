@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
-
         <link
             rel="icon"
             type="image/png"
@@ -12,16 +10,12 @@
             href="./images/favicon-32x32.png"
         />
         <link rel="stylesheet" href="./src/output.css" />
-
         <title>Frontend Mentor | Expenses chart component</title>
-
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style></style>
     </head>
     <body>
-        <main class="min-h-screen w-full w-93-75 px-10  grid place-content-center gap-5">
+        <main class="min-h-screen w-[70%] md:w-screen px-10 grid place-content-center gap-5">
             <!--BALANCE-->
-            <section class="flex justify-between items-center bg-[#EC755D] text-white rounded-lg px-8 py-6 w-[80%] md:w-full">
+            <section class="flex justify-between items-center bg-[#EC755D] text-white rounded-lg md:w-full px-8 py-6 ">
               <div>
                   <p class="opacity-80 text-sm">
                       My balance
@@ -35,7 +29,7 @@
               </div>
             </section>
             <!--SPENDING-->
-            <section class=" bg-white text-[#3A2315] w-[80%] md:w-full h-max p-8 rounded-xl">
+            <section class=" bg-white text-[#3A2315] h-max p-8 rounded-xl">
                 <h1 class="font-semibold text-2xl mb-5">
                     Spending - Last 7 days
                 </h1>
@@ -53,12 +47,12 @@
                             Total this month
                         </p>
                         <p class="flex gap-0 font-bold text-3xl">
-                            $ <span id="total-amount"></span>
+                            $ <span id="total-amount" class="text-[#3A2315]"></span>
                         </p>
                     </div>
                     <!--POURCENTAGE-->
                     <div class="text-right">
-                        <p id="pourcentage" class="font-bold text-xs">
+                        <p id="pourcentage" class="text-[#3A2315] font-bold text-xs">
                             +2.4% 
                         </p>
                         <p class="text-slate-500/50 text-sm">           
