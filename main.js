@@ -1,8 +1,7 @@
 
-let balance = document.getElementById("balance").innerHTML = "$" + 921.48; 
-
+let balance = document.getElementById("balance").innerHTML = 921.48; 
 let charts = document.getElementById("charts"); 
-let total = document.getElementById("total");
+let monthTotal = document.getElementById("total");
 let pourcentage = document.getElementById("pourcentage");
 
 // DAYS
@@ -12,8 +11,8 @@ let pourcentage = document.getElementById("pourcentage");
 // let mondayAmount = document.getElementById("mon-amount")
 
 // DISPLAY HOVER AMOUNT
-// monday.addEventListener("mouseenter", function() {
-//     mondayAmount.classList.toggle("invisible");
+// charts.addEventListener("mouseenter", function() {
+//     chart.classList.toggle("invisible");
 // })
 
 
@@ -21,15 +20,26 @@ fetch("/data.json")
   .then(response => response.json())
   .then(data => {
 
-    total = data.reduce((sum, item) => sum + item.amount, 0)
-    console.log(total)
+    // CALCULATE EXPENSES SUM
+    let expensesSum = data.reduce((sum, item) => sum + item.amount, 0)
+    console.log(expensesSum) // 227,94
 
+    
+    let total = document.getElementById("total-amount");
+
+    let result = balance - expensesSum
+
+    // DISPLAY TOTAL AFTER EXPENSES 
+    total.innerHTML = result
+
+    
+    // MAP THROUGH DATA.JSON 
     data.map(displayDay)
 
+    // DISPLAY DAILY CHART
     function displayDay(item) {
-      console.log(item.day)
-      charts.innerHTML += `<li id="monday">
-          <div id="mon-amount" class="invisible bg-[#3A2315] p-2  text-white text-center rounded-lg">
+      charts.innerHTML += `<li id=${item.day}>
+          <div id=${item.amount} class="invisible bg-[#3A2315] p-2  text-white text-center rounded-lg">
              <p>${item.amount}</p> 
           </div>
           <div class="bg-[#EC755D] w-10 h-20 rounded-md relative">
@@ -39,9 +49,12 @@ fetch("/data.json")
           </div>
           <p class="opacity-60">${item.day}</p>
       </li>`
-    }
 
-    
+      let mon = document.getElementById('mon');
+
+      
+
+    }
 
     
 });
@@ -49,4 +62,3 @@ fetch("/data.json")
 // WHAT DAY R WE 
 let today = new Date().getDay();
 
-// TOTAL
